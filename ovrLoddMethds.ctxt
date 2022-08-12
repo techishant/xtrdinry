@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=ovrLoddMethds
+comment0.text=\r\n\ method\ signature\ \=\ method\ name\ +\ parameters\r\n\ In\ parameters\ dataTypes\ and\ no.\ of\ parameters\ matters.\ Identifier\ doesn't\ matter.\r\n
+comment1.params=
+comment1.target=void\ main()
+comment2.params=a\ b
+comment2.target=int\ add(int,\ int)
+comment3.params=a\ b
+comment3.target=double\ add(double,\ double)
+comment4.params=a\ b\ c
+comment4.target=int\ add(int,\ int,\ int)
+comment5.params=a\ b\ c
+comment5.target=double\ add(double,\ double,\ double)
+comment6.params=a\ b\ c\ d
+comment6.target=int\ add(int,\ int,\ int,\ int)
+comment7.params=a\ b\ c\ d
+comment7.target=double\ add(double,\ double,\ double,\ double)
+numComments=8
