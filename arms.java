@@ -1,3 +1,7 @@
+/**
+ * This program printlns all the armstrong no.s btw 1 to 999;
+ */
+
 public class arms{
     public static void main(){
         int  h, t , o;

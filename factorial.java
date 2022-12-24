@@ -1,9 +1,13 @@
+import java.util.Scanner;
 public class factorial{
-    public static void main(){
-        
-        System.out.println(fact(9));
-    }
     static int facto = 1;
+    public static void main(){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter a no.: ");
+        int num = in.nextInt();
+        System.out.println(fact(num));
+    }
+    
     
     public static int fact(int n){
         facto = facto * n;
