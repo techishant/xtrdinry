@@ -3,17 +3,22 @@ package pixl;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.io.FileWriter;
  
 import javax.imageio.ImageIO;
  
-public class art {
+public class writeArt {
     public static void main(String[] args) {
+        String out = "";
+        FileWriter fWriter = null;
         
         System.out.println("Working Directory = " + System.getProperty("user.dir"));
         BufferedImage img = null;
             try 
             {
-                img = ImageIO.read(new File("pixl\\A.png")); 
+                fWriter = new FileWriter(
+                "pixl\\out.txt");
+                img = ImageIO.read(new File("pixl\\p.jpg")); 
             } 
             catch (IOException e) 
             {
@@ -23,7 +28,7 @@ public class art {
         System.out.println(img.getWidth() + " " + img.getHeight()); 
         img.getRGB(0,0,img.getWidth(),img.getHeight(),rgbArr,0,img.getWidth());
         
-        String density = "Ñ@#W$9876543210?!abc;:+=-,._    ";
+        String density = "Ñ@#W$9876543210?!abc;:+=-,._ ";
 
         int argb=0;
         int av;
@@ -39,13 +44,20 @@ public class art {
             av = (r + g + b)/3;
             
             if(scale(av,density.length()) == -1) System.out.println(av);
-            System.out.print(density.charAt(scale(av,density.length())));
+            out+=density.charAt(scale(av,density.length()));
                 
             if(index >= img.getWidth()){
                 index = 0;
-                System.out.println();
+                out+="\n";
             }
         }
+        try{
+            fWriter.write(out);
+            fWriter.close();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+        System.out.println("SUCCESS");
     }
     public static int scale(int n, int k){
         double c = 255.0/k;
