@@ -18,7 +18,7 @@ public class writeArt {
             {
                 fWriter = new FileWriter(
                 "pixl\\out.txt");
-                img = ImageIO.read(new File("pixl\\p.jpg")); 
+                img = ImageIO.read(new File("pixl\\G1.png")); 
             } 
             catch (IOException e) 
             {
@@ -29,6 +29,8 @@ public class writeArt {
         img.getRGB(0,0,img.getWidth(),img.getHeight(),rgbArr,0,img.getWidth());
         
         String density = "Ñ@#W$9876543210?!abc;:+=-,._ ";
+        //String density = " .:-=+*#%@";
+        //String density = "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]?-_+~<>i!lI;:,\"^`'. ";
 
         int argb=0;
         int av;
