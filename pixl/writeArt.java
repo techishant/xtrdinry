@@ -18,7 +18,7 @@ public class writeArt {
             {
                 fWriter = new FileWriter(
                 "pixl\\out.txt");
-                img = ImageIO.read(new File("pixl\\G1.png")); 
+                img = ImageIO.read(new File("pixl\\SS.png")); 
             } 
             catch (IOException e) 
             {
